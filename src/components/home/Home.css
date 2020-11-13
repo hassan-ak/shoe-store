@@ -1,0 +1,36 @@
+.homeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align: centre;
+    min-height: 100vh;
+}
+
+.shoeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+h1 {
+    color: rgb(17, 24, 18);
+    margin: none;
+    text-align: center;
+}
+
+.shoeImage{
+    max-width: 100%;
+}
+
+.homeLink{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.homeLink:hover{
+    transform: scale(1.1);
+}
