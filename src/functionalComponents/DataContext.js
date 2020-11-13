@@ -320,5 +320,6 @@ export const initialState = {
     ],
 };
 
+// DataContext using create Context
 export const DataContext = createContext(initialState);
 export default DataContext;
