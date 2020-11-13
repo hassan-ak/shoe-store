@@ -50,6 +50,18 @@ h2{
     margin-top: 0pt;
 }
 
+.titleContainer {
+    background-color: aliceblue;
+    height: 50px;
+    margin-top: 75px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media(max-width: 960px){
     .productsContainer{
         margin-top: 100px;
