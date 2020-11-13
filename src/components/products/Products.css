@@ -1,0 +1,58 @@
+.productsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    margin: 2% 2% !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.gents {
+    border-bottom: 10px solid blue;
+}
+
+.ladies{
+    border-bottom: 10px solid purple;
+  }
+
+.productsLink{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.images{
+    max-height: 250px;
+}
+
+@media(max-width: 960px){
+    .productsContainer{
+        margin-top: 100px;
+    }
+    .images{
+        width: 300px;
+    }
+}
+
+@media(max-width: 500px){
+    .images{
+        max-height: 200px;
+        width: auto;
+    }
+  }
+
+@media(max-width: 400px){
+    .productsContainer{
+        margin-top: 50px;
+    }
+    .images{
+        max-height: 150px;
+    }
+}
