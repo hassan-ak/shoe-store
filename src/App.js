@@ -10,8 +10,10 @@ import { Ladies } from './components/products/Ladies';
 import { ErrorPage } from './components/errorPage/ErrorPage';
 import { ProductsCatagory } from './components/products/ProductsCategory';
 import { SelectedProduct } from './components/products/SelectedProduct';
+import { Cart } from './components/cart/Cart';
 // Functional Component Imports
 import { GlobalDataProvider } from './functionalComponents/DataProvider';
+import CartContextProvider from './functionalComponents/CartContext';
 // Style Imports
 import './App.css';
 
@@ -19,19 +21,22 @@ import './App.css';
 function App() {
   return (
     <GlobalDataProvider>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="products" element={<Products/>}/>
-        <Route path="products/gents" element={<ProductsCatagory/>}>
-          <Route path="/" element={<Gents/>}/>
-          <Route path=":slug" element={<SelectedProduct/>}></Route>
-        </Route>
-        <Route path="products/ladies" element={<ProductsCatagory/>}>
-          <Route path="products/ladies" element={<Ladies/>}/>
-          <Route path=":slug" element={<SelectedProduct/>}></Route>
-        </Route>
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>     
+      <CartContextProvider>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="products" element={<Products/>}/>
+          <Route path="products/gents" element={<ProductsCatagory/>}>
+            <Route path="/" element={<Gents/>}/>
+            <Route path=":slug" element={<SelectedProduct/>}></Route>
+          </Route>
+          <Route path="products/ladies" element={<ProductsCatagory/>}>
+            <Route path="products/ladies" element={<Ladies/>}/>
+            <Route path=":slug" element={<SelectedProduct/>}></Route>
+          </Route>
+          <Route path="cart" element={<Cart/>} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>   
+      </CartContextProvider>  
     </GlobalDataProvider>
   );
 }
