@@ -1,0 +1,8 @@
+.errorPage {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url("../../images/Error.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
