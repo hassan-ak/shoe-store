@@ -15,10 +15,22 @@ export const CartContext = createContext(initialState);
 const CartContextProvider = ({children}) => {
     // Define State using cart Reducer
     const [ state, dispatch ] = useReducer(CartReducer, initialState);
+    
+    function addToCart(product){
+        dispatch({
+            type: "ADD",
+            payload: {
+                ...product,
+            },
+        }
+        )
+    }
+
     return(
         <CartContext.Provider 
             value={{
                 cart: state.cart,
+                addToCart,
             }}
         >
             {children}

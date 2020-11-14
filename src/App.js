@@ -30,7 +30,7 @@ function App() {
             <Route path=":slug" element={<SelectedProduct/>}></Route>
           </Route>
           <Route path="products/ladies" element={<ProductsCatagory/>}>
-            <Route path="products/ladies" element={<Ladies/>}/>
+            <Route path="/" element={<Ladies/>}/>
             <Route path=":slug" element={<SelectedProduct/>}></Route>
           </Route>
           <Route path="cart" element={<Cart/>} />
